@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+
+.errorNumber {
+  height: 263px;
+  font-size: 288px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+  color: $background-secondary;
+  margin-top: 139px;
+  margin-bottom: 139px;
+}
+
+.errorText {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  font-family: $font-primary;
+  color: $background-secondary;
+  margin-bottom: 139px;
+
+  .mobile-form {
+    //Désactivation du retour à la ligne
+    display: none;
+  }
+}
+
+.errorBack {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-family: $font-primary;
+  color: $text-secondary;
+  margin-bottom: 139px;
+}
+// }
+
+//MediaQueries
+@media (min-width: 769px) and (max-width: 1024px) {
+  .errorNumber {
+    height: 180px;
+    font-size: 140px;
+  }
+
+  .errorText {
+    font-size: 26px;
+  }
+
+  .errorBack {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .errorNumber {
+    height: 99px;
+    font-size: 96px;
+    margin-top: 113px;
+    margin-bottom: 113px;
+  }
+
+  .errorText {
+    height: 52px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 113px;
+
+    .mobile-form {
+      display: block;
+    }
+  }
+
+  .errorBack {
+    font-size: 14px;
+    margin-bottom: 113px;
+  }
+}

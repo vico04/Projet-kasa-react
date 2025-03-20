@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.carrousel {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  font-family: $font-primary;
+  max-height: 415px;
+  margin-bottom: 30px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .material-icons {
+    font-size: clamp(24px, 6vw, 79px);
+    color: $background-quaternary;
+    cursor: pointer;
+  }
+
+  .previous {
+    all: unset; //désactive tous les styles du bouton
+    height: 100%;
+    position: absolute;
+    left: 17px;
+  }
+
+  .next {
+    all: unset; //désactive tous les styles du bouton
+    position: absolute;
+    height: 100%;
+    right: 0px;
+  }
+
+  .photo-number {
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    color: $text-primary;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carrousel {
+    .previous {
+      left: 14px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .carrousel {
+    min-height: 255px;
+
+    .previous {
+      left: 9px;
+    }
+
+    img {
+      min-height: 255px;
+      border-radius: 10px;
+    }
+
+    .photo-number {
+      display: none;
+    }
+  }
+}

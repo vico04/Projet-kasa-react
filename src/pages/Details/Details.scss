@@ -1,0 +1,259 @@
+@use '../../styles/variables' as *;
+
+.details-container {
+  font-family: $font-primary;
+
+  .carrousel {
+    margin-top: 50px;
+  }
+
+  .title-location h1 {
+    font-size: 36px;
+    font-weight: normal;
+    color: $background-secondary;
+  }
+
+  .informations-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .location {
+    padding-top: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+
+    .fa-star {
+      font-size: 24px;
+    }
+
+    .completed {
+      color: $background-secondary;
+    }
+
+    .empty {
+      color: #e3e3e3;
+    }
+
+    .rating {
+      width: 196px;
+      display: flex;
+      justify-content: end;
+      padding-top: 6px;
+    }
+  }
+
+  .host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: $background-secondary;
+    margin-bottom: 21px;
+
+    p {
+      width: 92px;
+      text-align: end;
+    }
+
+    img {
+      width: clamp(32px, 7vw, 64px); /* S'adapte à la taille de l'écran */
+      height: clamp(32px, 7vw, 64px);
+      border-radius: 50px;
+    }
+  }
+
+  .tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .box {
+      width: 140px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $background-secondary;
+      border-radius: 25px;
+      background-color: $background-secondary;
+    }
+
+    .tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      // white-space: nowrap;
+    }
+  }
+
+  .description-equipt {
+    width: 100%; // Permet l'adaptation
+    max-width: 1240px; // Garde une limite sur grands écrans
+    margin-top: 24px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 76px;
+
+    .collapse-box {
+      flex: 1;
+    }
+
+    .arrow-box {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .collapse {
+    width: 100%;
+    max-width: 582px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+    color: $text-primary;
+    background-color: $background-secondary;
+    box-sizing: border-box;
+
+    h3 {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+  }
+
+  .collapse-content {
+    width: 100%;
+    max-width: 579px; // Même largeur que .collapse
+  }
+
+  .arrow {
+    font-size: 32px;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .open {
+    transform: rotate(180deg);
+  }
+
+  .appear {
+    height: 150px;
+    max-height: 300px; // Ajuste selon le contenu
+    background-color: $background-primary; // Fond gris quand visible
+    padding-top: 22px;
+    padding-left: 22px;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+}
+
+//MediaQueries
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .details-container {
+    .title-location h1 {
+      font-size: 30px;
+    }
+    .host-rating {
+      gap: 0px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .details-container {
+    .carrousel {
+      margin-top: 27px;
+      margin-bottom: 15px;
+    }
+
+    .informations-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 18px;
+        width: 100%;
+      }
+
+      P {
+        font-size: 14px;
+      }
+    }
+
+    .host-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      .fa-star {
+        font-size: 18px;
+      }
+
+      .host {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+
+        p {
+          width: 70px;
+          text-align: end;
+          font-size: 12px;
+        }
+      }
+
+      .rating {
+        display: flex;
+        justify-content: start;
+      }
+    }
+
+    .tags {
+      margin-bottom: 16px;
+      .box {
+        width: 100px;
+        height: 18px;
+        border-radius: 5px;
+      }
+
+      .tag {
+        font-size: 10px;
+      }
+    }
+
+    .description-equipt {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .collapse {
+        height: 30px;
+
+        h3 {
+          font-size: 13px;
+        }
+      }
+
+      .collapse-box {
+        gap: 20px;
+      }
+    }
+  }
+}
