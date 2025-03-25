@@ -1,10 +1,10 @@
-import '../../styles/Card.scss';
+import '../Card/Card.scss';
 
 const Card = ({ title, cover }) => {
   return (
-    <div className="card">
-      <img src={cover} alt={title} className="card-img" />
-      <h3 className="card-title">{title}</h3>
+    <div className="card-container">
+      <img src={cover} alt={title} className="logement-image" />
+      <h3 className="logement-title">{title}</h3>
     </div>
   );
 };

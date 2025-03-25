@@ -52,8 +52,8 @@ const Details = () => {
           title="Équipements"
           content={
             <ul>
-              {logement.equipments.map((item, index) => (
-                <p key={index}>{item}</p>
+              {logement.equipments.map((equipement, index) => (
+                <p key={index}>{equipement}</p>
               ))}
             </ul>
           }

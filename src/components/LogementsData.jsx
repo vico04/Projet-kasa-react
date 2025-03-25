@@ -5,14 +5,8 @@ const logementsData = () => {
   //Creation d'une div, class et index pour chaque sous tableau
   return (
     <div className="logements-container">
-      {logements.map((logement, index) => (
-        <Logement
-          key={logement.id}
-          id={logement.id}
-          title={logement.title}
-          cover={logement.cover}
-          firstInRow={index % 3 === 0}
-        />
+      {logements.map((logement) => (
+        <Logement key={logement.id} id={logement.id} title={logement.title} cover={logement.cover} />
       ))}
     </div>
   );

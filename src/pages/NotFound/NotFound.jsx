@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../pages/NotFound/NotFound.scss';
 
 const NotFound = () => {
@@ -9,9 +9,9 @@ const NotFound = () => {
         Oups! La page que <br className="mobile-form" />
         vous demandez n'existe pas.
       </p>
-      <NavLink to="/" className="errorBack">
+      <Link to="/" className="errorBack">
         Retourner sur la page d’accueil
-      </NavLink>
+      </Link>
     </div>
   );
 };
