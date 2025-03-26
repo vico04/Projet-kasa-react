@@ -1,4 +1,4 @@
-import AppRouter from './components/AppRouter/AppRouter';
+import AppRouter from './AppRouter';
 import './styles/animations.scss';
 
 const App = () => {
