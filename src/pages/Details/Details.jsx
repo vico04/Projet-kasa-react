@@ -40,7 +40,11 @@ const Details = () => {
           {/* Note (étoiles) */}
           <div className="rating">
             {[...Array(5)].map((_, index) => (
-              <FontAwesomeIcon key={index} icon={faStar} className={index < logement.rating ? 'completed' : 'empty'} />
+              <FontAwesomeIcon
+                key={'starIcon-' + index}
+                icon={faStar}
+                className={index < logement.rating ? 'completed' : 'empty'}
+              />
             ))}
           </div>
         </div>
@@ -53,7 +57,7 @@ const Details = () => {
           content={
             <ul>
               {logement.equipments.map((equipement, index) => (
-                <p key={index}>{equipement}</p>
+                <p key={'equipement-' + index}>{equipement}</p>
               ))}
             </ul>
           }
