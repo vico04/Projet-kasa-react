@@ -11,12 +11,15 @@ const Collapse = ({ title, content }) => {
       <div className="collapse">
         <h3>{title}</h3>
         <div className="arrow-box">
-          <span className={`material-icons arrow ${isOpen ? 'turn' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+          <span
+            className={`material-icons arrow ${isOpen ? 'turn' : ''}`}
+            onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
+          >
             keyboard_arrow_up
           </span>
         </div>
       </div>
-      <div className={`collapse-content ${isOpen ? 'appear scale-in-ver-top' : ''}`}>{isOpen && content}</div>
+      {isOpen && <div className="collapse-content appear scale-in-ver-top">{content}</div>}
     </div>
   );
 };

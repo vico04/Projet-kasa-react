@@ -25,7 +25,7 @@ const Details = () => {
           {/* Tags */}
           <div className="tags">
             {logement.tags.map((tag, index) => (
-              <div key={index} className="box">
+              <div key={'tag-' + index} className="box">
                 <span className="tag">{tag}</span>
               </div>
             ))}
