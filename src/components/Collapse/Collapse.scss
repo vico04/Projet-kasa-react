@@ -30,11 +30,15 @@
 
   .collapse-content {
     width: 100%;
-    max-width: 974px; // Même largeur que .collapse
+    max-width: 1000px;
+  }
+
+  .collapse-text {
+    padding: 15px;
   }
 
   .arrow-box {
-    padding-right: 20px;
+    padding-right: 9px;
     display: flex;
     align-items: center;
   }
@@ -42,7 +46,6 @@
   .arrow {
     font-size: 36px;
     cursor: pointer;
-
     transition: transform 0.3s ease-in-out;
     transform-origin: center; // Centre l'axe de rotation
   }
@@ -52,8 +55,36 @@
   }
 
   .appear {
-    max-height: 100px; // Ajuste selon le contenu
+    max-height: 300px; // Ajuste selon le contenu
     background-color: $background-primary; // Fond gris quand visible
-    padding: 12px; // Assure une bonne apparence
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .collapse-container {
+    margin-top: 25px;
+
+    .collapse {
+      height: 30px;
+      border-radius: 5px;
+      margin-bottom: 0px;
+
+      h3 {
+        font-size: 13px;
+      }
+    }
+
+    .collapse-text {
+      font-size: 13px;
+      padding: 12px;
+    }
+
+    .arrow-box {
+      height: 30px;
+    }
+
+    .arrow {
+      font-size: 32px;
+    }
   }
 }

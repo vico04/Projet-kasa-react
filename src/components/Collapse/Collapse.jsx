@@ -19,7 +19,11 @@ const Collapse = ({ title, content }) => {
           </span>
         </div>
       </div>
-      {isOpen && <div className="collapse-content appear scale-in-ver-top">{content}</div>}
+      {isOpen && (
+        <div className="collapse-content appear scale-in-ver-top">
+          <div className="collapse-text"> {content} </div>
+        </div>
+      )}
     </div>
   );
 };
